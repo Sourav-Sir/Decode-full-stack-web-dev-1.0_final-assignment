@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    /* Dark background color */
+    padding: 10px 20px;
+    /* Padding around the navbar */
+}
+
+.nav-links {
+    list-style-type: none;
+    /* Remove bullet points */
+    display: flex;
+    /* Use flexbox for horizontal layout */
+    justify-content: space-around;
+    /* Evenly space links */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.nav-links li {
+    margin: 0 15px;
+    /* Spacing between items */
+}
+
+.nav-links a {
+    color: white;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 10px 15px;
+    /* Padding around the text */
+    transition: color 0.3s;
+    /* Smooth transition for color change */
+    border: 2px solid transparent;
+    /* Base border */
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+    /* Color on hover (tomato) */
+}
+
+/* Different border styles for each navigation item */
+.border-style1 a {
+    border: 2px solid #ff6347;
+    /* Solid border */
+}
+
+.border-style2 a {
+    border: 2px dashed #ff6347;
+    /* Dashed border */
+}
+
+.border-style3 a {
+    border: 2px dotted #ff6347;
+    /* Dotted border */
+}
+
+.border-style4 a {
+    border: 2px double #ff6347;
+    /* Double border */
+}
+
+.border-style5 a {
+    border: 2px groove #ff6347;
+    /* Groove border */
+}
+
+/* Additional hover effect for borders */
+.nav-links li:hover a {
+    border-color: white;
+    /* Change border color on hover */
+}

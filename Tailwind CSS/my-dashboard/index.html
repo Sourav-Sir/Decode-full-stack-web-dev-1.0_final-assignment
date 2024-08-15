@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet">
+  <title>Dashboard</title>
+</head>
+
+<body class="bg-gray-100">
+  <script type="module" src="/src/main.jsx"></script>
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 text-white">
+      <div class="p-6">
+        <h1 class="text-2xl font-bold">Dashboard</h1>
+      </div>
+      <nav class="mt-10">
+        <ul>
+          <li class="px-6 py-2 hover:bg-gray-700">
+            <a href="#" class="flex items-center">
+              <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h18v2H3v-2zm0 4h18v2H3v-2z" />
+              </svg>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="px-6 py-2 hover:bg-gray-700">
+            <a href="#" class="flex items-center">
+              <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 3l9 9-9 9-9-9 9-9z" />
+              </svg>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li class="px-6 py-2 hover:bg-gray-700">
+            <a href="#" class="flex items-center">
+              <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l10 10-10 10-10-10L12 2zm0 4.5L5.5 12 12 18.5 18.5 12 12 6.5z" />
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="px-6 py-2 hover:bg-gray-700">
+            <a href="#" class="flex items-center">
+              <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 100-16 8 8 0 000 16z" />
+              </svg>
+              <span>Reports</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-10">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-6">Welcome to Your Dashboard</h2>
+      <p class="text-gray-600 mb-4">Here you can manage your projects, settings, and reports.</p>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold">Project Overview</h3>
+          <p class="text-gray-600">Details about your projects go here.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold">Recent Activity</h3>
+          <p class="text-gray-600">Details about your recent activity go here.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

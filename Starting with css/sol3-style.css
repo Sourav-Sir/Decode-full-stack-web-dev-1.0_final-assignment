@@ -1,0 +1,73 @@
+/* Basic reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    /* Light background color for the page */
+}
+
+/* Styling the form */
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    /* White background for the form */
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form section styling */
+.form-section {
+    margin-bottom: 15px;
+}
+
+/* Input field styling */
+.input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    /* Light border for inputs */
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+/* Custom color palette */
+.input--primary {
+    background-color: #e0f7fa;
+    /* Light cyan */
+}
+
+.input--secondary {
+    background-color: #ffe0b2;
+    /* Light orange */
+}
+
+.input--tertiary {
+    background-color: #f1f8e9;
+    /* Light green */
+}
+
+/* Button styling */
+.button {
+    background-color: #4caf50;
+    /* Green button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Change button color on hover */
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Apply opacity to one of the form sections */
+.form-section--transparent {
+    opacity: 0.8;
+    /* Make this section slightly transparent */
+}

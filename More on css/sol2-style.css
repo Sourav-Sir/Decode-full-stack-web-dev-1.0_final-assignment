@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+}
+
+.centered-container {
+    text-align: center;
+    /* Center text inside the div */
+    padding: 20px;
+    /* Padding around the content */
+    border: 1px solid #ccc;
+    /* Optional: border around the div */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional: shadow effect */
+}
+
+.image {
+    max-width: 100%;
+    /* Responsive image */
+    height: 300px;
+    /* Maintain aspect ratio */
+}

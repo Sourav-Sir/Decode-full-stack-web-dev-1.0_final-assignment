@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout with Float</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 700px;
+            height: auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            background-color: rgb(237, 180, 115);
+        }
+
+        .card img {
+            width: 120px;
+            height: auto;
+            float: right;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Earth Image">
+        <h2>The Earth!!!</h2>
+        <p>Our planet, Earth, is the third planet from the Sun and the only astronomical object known to harbor life.
+            It's a beautiful place full of diverse ecosystems.</p>
+        <div class="clear"></div>
+    </div>
+</body>
+
+</html>

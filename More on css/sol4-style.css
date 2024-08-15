@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+    background-color: #f0f0f0;
+    /* Light background color */
+}
+
+.image-container {
+    overflow: hidden;
+    /* Hide overflow */
+    width: 200px;
+    /* Set width of the container */
+    height: 200px;
+    /* Set height of the container */
+    border-radius: 50%;
+    /* Make the container circular */
+}
+
+.circular-image {
+    width: 100%;
+    /* Make the image fill the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 50%;
+    /* Make the image circular */
+}

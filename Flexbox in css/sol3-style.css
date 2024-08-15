@@ -1,0 +1,33 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    /* Enable Flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+}
+
+.box {
+    width: 200px;
+    /* Width of the box */
+    height: 100px;
+    /* Height of the box */
+    background-color: rgb(18, 224, 42);
+    /* Background color */
+    display: flex;
+    /* Enable Flexbox for the box */
+    justify-content: center;
+    /* Center text horizontally */
+    align-items: center;
+    /* Center text vertically */
+    border: 1px solid #000;
+    /* Optional border */
+}

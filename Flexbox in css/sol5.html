@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC Ticket Booking</title>
+    <link rel="stylesheet" href="/sol5-style.css">
+</head>
+
+<body>
+    <header>
+        <img src="/irctc-logo.png" alt="IRCTC Logo" class="logo">
+        <h1>IRCTC Train Ticket Booking</h1>
+    </header>
+
+    <main class="main-container">
+        <form class="booking-form">
+            <div class="form-group">
+                <label for="from">From:</label>
+                <input type="text" id="from" placeholder="Enter departure station" required>
+            </div>
+            <div class="form-group">
+                <label for="to">To:</label>
+                <input type="text" id="to" placeholder="Enter destination station" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Journey:</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="passengers">Number of Passengers:</label>
+                <input type="number" id="passengers" min="1" value="1" required>
+            </div>
+            <button type="submit">Check Availability</button>
+        </form>
+
+        <img src="/rail.png" alt="Indian Railway Train" class="train-image">
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IRCTC. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+/* Base block styling */
+.text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Modifier styles */
+.text--primary {
+    color: blue;
+    font-weight: bold;
+}
+
+.text--secondary {
+    color: green;
+    font-style: italic;
+}
+
+.text--tertiary {
+    color: orange;
+    text-decoration: underline;
+}
+
+.text--highlight {
+    background-color: yellow;
+    padding: 5px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioned Boxes</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+        }
+
+        /* Box A */
+        #boxA {
+            top: 200px;
+            left: 200px;
+        }
+
+        /* Box B (-30px left, -30px above from the center of box A) */
+        #boxB {
+            top: calc(200px + 25px - 30px - 50px);
+            left: calc(200px + 25px - 30px - 50px);
+        }
+
+        /* Box C (-30px right, -30px above from the center of box A) */
+        #boxC {
+            top: calc(200px + 25px - 30px - 50px);
+            left: calc(200px + 25px + 30px);
+        }
+
+        /* Box D (-30px left, -30px below from the center of box A) */
+        #boxD {
+            top: calc(200px + 25px + 30px);
+            left: calc(200px + 25px - 30px - 50px);
+        }
+
+        /* Box E (-30px right, -30px below from the center of box A) */
+        #boxE {
+            top: calc(200px + 25px + 30px);
+            left: calc(200px + 25px + 30px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boxA" class="box">A</div>
+    <div id="boxB" class="box">B</div>
+    <div id="boxC" class="box">C</div>
+    <div id="boxD" class="box">D</div>
+    <div id="boxE" class="box">E</div>
+</body>
+
+</html>

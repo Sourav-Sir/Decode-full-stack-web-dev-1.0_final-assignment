@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demonstration</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* This is an internal stylesheet */
+        .box {
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        /* Targeting a class with internal CSS */
+        .box-blue {
+            background-color: lightblue;
+        }
+
+        /* Targeting a class with internal CSS */
+        .box-green {
+            background-color: lightgreen;
+        }
+    </style>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="sol1-style.css"> <!-- External CSS file -->
+</head>
+
+<body>
+    <h1>CSS Demonstration</h1>
+
+    <!-- Div with inline CSS -->
+    <div class="box box-blue" style="color: white;"> <!-- Inline CSS -->
+        This box has a light blue background and white text (inline CSS).
+    </div>
+
+    <!-- Div with internal CSS -->
+    <div class="box box-green">
+        This box has a light green background (internal CSS).
+    </div>
+
+    <!-- Div with external CSS -->
+    <div class="box box-external">
+        This box has an external stylesheet applied. (Make sure to define the .box-external class in styles.css)
+    </div>
+</body>
+
+</html>

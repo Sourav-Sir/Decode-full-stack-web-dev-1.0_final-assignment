@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Fallback font */
+    background-color: #f9f9f9;
+    /* Light background color */
+}
+
+.container {
+    max-width: 600px;
+    /* Maximum width for the container */
+    margin: 50px auto;
+    /* Center the container */
+    padding: 20px;
+    /* Padding around the content */
+    background-color: white;
+    /* White background for content */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+}
+
+h1 {
+    text-align: center;
+    /* Center-align heading */
+    color: #333;
+    /* Dark heading color */
+}
+
+.requirements-list {
+    list-style-type: lower-roman;
+    /* Roman numerals for list items */
+    /* Default bullet points */
+    margin: 20px 0;
+    /* Margin above and below the list */
+    padding-left: 20px;
+    /* Padding to indent the list */
+}
+
+.requirements-list li {
+    font-size: 18px;
+    /* Font size for list items */
+    margin-bottom: 10px;
+    /* Spacing between list items */
+    color: #555;
+    /* Slightly lighter text color */
+}

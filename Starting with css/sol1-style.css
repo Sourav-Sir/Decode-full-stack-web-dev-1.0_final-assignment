@@ -1,0 +1,6 @@
+/* External stylesheet */
+.box-external {
+    background-color: lightcoral;
+    color: white;
+    /* This will be overridden by inline styles if applied */
+}

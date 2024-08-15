@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.pricing-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Space between cards */
+}
+
+.pricing-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    /* Adjust as needed */
+}
+
+.pricing-card h3 {
+    margin: 0 0 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pricing-card ul li {
+    margin: 10px 0;
+}
+
+.pricing-card button {
+    background-color: #007bff;
+    /* Adjust based on design */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.pricing-card button:hover {
+    background-color: #0056b3;
+    /* Darker shade for hover */
+}
+
+/* Highlight premium plan */
+.premium {
+    background-color: #0f0e0e;
+    color: #ddd;
+    border: 2px solid #007bff;
+    /* Highlight the premium plan */
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+}

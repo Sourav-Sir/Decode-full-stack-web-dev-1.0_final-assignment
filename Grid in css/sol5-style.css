@@ -1,0 +1,31 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    justify-items: center;
+    /* Aligns all items horizontally to the center */
+    background-color: #f0f0f0;
+}
+
+.item {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Override justify-self for the second item */
+.item:nth-child(2) {
+    justify-self: end;
+    /* Aligns this item to the right (end) */
+}
+
+/* Override justify-self for the third item */
+.item:nth-child(3) {
+    justify-self: start;
+    /* Aligns this item to the left (start) */
+}

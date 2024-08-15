@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Fallback font */
+    background-color: #f0f0f0;
+    /* Light background color */
+}
+
+.container {
+    text-align: center;
+    /* Center-align text */
+    padding: 20px;
+    /* Padding around the content */
+}
+
+.header {
+    font-family: 'Oswald', sans-serif;
+    /* Heading font */
+    font-size: 36px;
+    /* Font size for the heading */
+}
+
+.blog-image {
+    max-width: 100%;
+    /* Make image responsive */
+    height: 200px;
+    /* Maintain aspect ratio */
+    margin: 20px 0;
+    /* Margin above and below the image */
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    /* Paragraph font */
+    font-size: 18px;
+    /* Font size for the paragraph */
+    line-height: 1.6;
+    /* Line height for readability */
+    max-width: 800px;
+    /* Maximum width for paragraph */
+    margin: 0 auto;
+    /* Center the paragraph */
+}

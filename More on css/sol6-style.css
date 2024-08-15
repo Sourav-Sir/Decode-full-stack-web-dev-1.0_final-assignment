@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Fallback font */
+    background-color: #f9f9f9;
+    /* Light background color */
+}
+
+header {
+    background-color: #4CAF50;
+    /* Header background color */
+    color: white;
+    /* Header text color */
+    text-align: center;
+    /* Center-align header text */
+    padding: 20px;
+    /* Padding around the header */
+}
+
+.container {
+    max-width: 800px;
+    /* Maximum width for the content */
+    margin: 20px auto;
+    /* Center the container */
+    padding: 20px;
+    /* Padding around the content */
+    background-color: white;
+    /* White background for content */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+}
+
+.team-image {
+    max-width: 100%;
+    /* Make image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Rounded corners for image */
+}
+
+footer {
+    text-align: center;
+    /* Center-align footer text */
+    padding: 10px;
+    /* Padding around the footer */
+    background-color: #333;
+    /* Footer background color */
+    color: white;
+    /* Footer text color */
+    position: relative;
+    /* Position relative for footer */
+    bottom: 0;
+    /* Stick to the bottom */
+    width: 100%;
+    /* Full width footer */
+}

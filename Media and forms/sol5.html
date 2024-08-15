@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form with Password Matching</title>
+</head>
+
+<body>
+    <h1>Sign Up</h1>
+    <form
+        oninput="confirmPassword.setCustomValidity(confirmPassword.value != password.value ? 'Passwords do not match.' : '')">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" minlength="3" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" minlength="3" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" required><br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="150" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions</label><br><br>
+
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <h1>Sign In</h1>
+    <form>
+        <label for="signinEmail">Email:</label>
+        <input type="email" id="signinEmail" name="signinEmail" required><br><br>
+
+        <label for="signinPassword">Password:</label>
+        <input type="password" id="signinPassword" name="signinPassword" minlength="6" required><br><br>
+
+        <input type="submit" value="Sign In">
+    </form>
+</body>
+
+</html>
