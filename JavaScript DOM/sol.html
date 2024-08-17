@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+
+<body>
+
+    <h1>Shopping List</h1>
+    <input type="text" id="itemInput" placeholder="Enter item" />
+    <button id="addButton">Add Item</button>
+    <ul id="shoppingList"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addButton = document.getElementById('addButton');
+            const itemInput = document.getElementById('itemInput');
+            const shoppingList = document.getElementById('shoppingList');
+
+            addButton.addEventListener('click', () => {
+                const itemText = itemInput.value.trim();
+                if (itemText === '') return;
+
+                const listItem = document.createElement('li');
+                listItem.textContent = itemText;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', () => {
+                    shoppingList.removeChild(listItem);
+                });
+
+                listItem.appendChild(deleteButton);
+                shoppingList.appendChild(listItem);
+
+                itemInput.value = '';
+                itemInput.focus();
+            });
+
+            // Optional: Allow pressing "Enter" to add item
+            itemInput.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    addButton.click();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

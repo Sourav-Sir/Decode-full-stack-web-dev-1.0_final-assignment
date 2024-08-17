@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul id="menu">
+            <li class="menu-item" data-dropdown="dropdown1">Menu 1
+                <ul id="dropdown1" class="dropdown">
+                    <li><a href="#">Submenu 1-1</a></li>
+                    <li><a href="#">Submenu 1-2</a></li>
+                </ul>
+            </li>
+            <li class="menu-item" data-dropdown="dropdown2">Menu 2
+                <ul id="dropdown2" class="dropdown">
+                    <li><a href="#">Submenu 2-1</a></li>
+                    <li><a href="#">Submenu 2-2</a></li>
+                </ul>
+            </li>
+            <li class="menu-item" data-dropdown="dropdown3">Menu 3
+                <ul id="dropdown3" class="dropdown">
+                    <li><a href="#">Submenu 3-1</a></li>
+                    <li><a href="#">Submenu 3-2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            menuItems.forEach(item => {
+                item.addEventListener('mouseover', () => {
+                    const dropdownId = item.getAttribute('data-dropdown');
+                    const dropdown = document.getElementById(dropdownId);
+                    dropdown.style.display = 'block';
+                });
+
+                item.addEventListener('mouseout', () => {
+                    const dropdownId = item.getAttribute('data-dropdown');
+                    const dropdown = document.getElementById(dropdownId);
+                    dropdown.style.display = 'none';
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        .carousel {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image Carousel</h1>
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="image1.png" alt="Image 1" class="carousel-image">
+            <img src="image2.png" alt="Image 2" class="carousel-image">
+            <img src="image3.png" alt="Image 3" class="carousel-image">
+        </div>
+        <button class="nav-button prev">&#10094;</button>
+        <button class="nav-button next">&#10095;</button>
+    </div>
+
+    <script>
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        const carouselImages = document.querySelector('.carousel-images');
+        let index = 0;
+
+        function updateCarousel() {
+            const offset = -index * 100;
+            carouselImages.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            index = (index > 0) ? index - 1 : 2;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            index = (index < 2) ? index + 1 : 0;
+            updateCarousel();
+        });
+
+        updateCarousel();  // Initialize position
+    </script>
+
+</body>
+
+</html>

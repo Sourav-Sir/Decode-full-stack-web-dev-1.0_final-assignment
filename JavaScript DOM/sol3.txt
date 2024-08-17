@@ -1,0 +1,53 @@
+Event bubbling is a concept in the DOM (Document Object Model) that describes the way events propagate through the hierarchy of elements in a web page when an event occurs. Here's a detailed explanation:
+
+How Event Bubbling Works:
+Event Triggering: When an event occurs on an element, such as a mouse click or a keypress, it is initially triggered on the element where the event occurred. This element is referred to as the event target.
+
+Propagation Through Parent Elements: After the event is triggered on the target element, it bubbles up through its parent elements in the DOM tree. This means the event is dispatched to the parent element, then to its parent, and so on, until it reaches the top of the DOM hierarchy or the root document object.
+
+Event Phases: Event bubbling is one of the three phases in event propagation. The phases are:
+
+Capturing Phase: The event starts from the top of the DOM and travels down to the target element. This phase is less commonly used.
+Target Phase: The event is at the target element itself.
+Bubbling Phase: The event bubbles up from the target element to the top of the DOM.
+Event Listeners: Event listeners can be attached to elements at any level in the DOM hierarchy. If you attach an event listener to a parent element, it will be triggered for events occurring on any of its child elements as well, due to bubbling.
+
+Stopping Bubbling: Event bubbling can be stopped using the event.stopPropagation() method within an event handler. This prevents the event from propagating to parent elements.
+
+Example of Event Bubbling:
+Consider a simple HTML structure with nested elements:
+
+
+<div id="parent">
+  <button id="child">Click me</button>
+</div>
+
+<script>
+  document.getElementById('parent').addEventListener('click', function() {
+    console.log('Parent clicked');
+  });
+
+  document.getElementById('child').addEventListener('click', function() {
+    console.log('Child clicked');
+  });
+</script>
+
+Event Flow:
+
+When the button with the ID child is clicked, the click event is first triggered on the child button.
+The event then bubbles up to the parent <div> with the ID parent.
+Output:
+
+Child clicked
+Parent clicked
+
+This output occurs because the click event is first handled by the child button, and then it bubbles up to the parent <div>, where the parent’s event listener is triggered.
+
+Benefits of Event Bubbling:
+Delegated Event Handling: Allows for efficient event delegation by attaching a single event listener to a parent element rather than multiple listeners to child elements.
+
+Simplified Management: Makes it easier to manage events on dynamically added or removed child elements since you don’t need to attach and detach event handlers for each individual child.
+
+Consistent Behavior: Provides a consistent way to handle events for nested elements, making it easier to implement complex interactions.
+
+In summary, event bubbling is a fundamental aspect of event handling in the DOM that allows events to propagate up through the element hierarchy, enabling more efficient and manageable event handling strategies.
