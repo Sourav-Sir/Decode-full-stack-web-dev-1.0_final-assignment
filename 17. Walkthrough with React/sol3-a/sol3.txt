@@ -1,0 +1,63 @@
+Difference Between npm and npx
+1. npm (Node Package Manager):
+
+Purpose: npm is a package manager for JavaScript. It is used to install, manage, and distribute JavaScript packages and dependencies for your project. When you run npm install, it installs the packages listed in the package.json file into the node_modules directory.
+Global vs. Local Installation: With npm, you can install packages globally or locally. A global installation means the package is available system-wide, while a local installation means it's available only within the specific project.
+Usage Example: If you want to create a new React app, you might need to install create-react-app globally first using npm and then use it to create a new project.
+
+npm install -g create-react-app
+create-react-app my-app
+2. npx (Node Package Execute):
+
+Purpose: npx is a tool that comes with npm (version 5.2.0 and above) and is used to execute packages directly from the npm registry without installing them globally or locally. It runs a package's binaries without requiring you to install the package first.
+On-Demand Execution: With npx, you can run the latest version of a package or a specific version on-demand. This is useful for one-off commands or avoiding the clutter of globally installed packages.
+Usage Example: Instead of installing create-react-app globally, you can use npx to create a new React app in a single command.
+
+npx create-react-app my-app
+Example: Using create-react-app
+Using npm:
+
+Step 1: Install create-react-app Globally
+
+First, you install create-react-app globally so that you can use it to create new React projects.
+
+npm install -g create-react-app
+Step 2: Create a New React App
+
+After installation, you can use the globally installed create-react-app to create a new React project.
+
+create-react-app my-app
+Pros and Cons:
+
+Pros: The create-react-app command is available globally, so you can use it any time without re-installing it.
+Cons: Installing packages globally can lead to version conflicts, and it takes up system-wide storage. If you frequently use different versions, managing them becomes cumbersome.
+Using npx:
+
+Step 1: Directly Create a New React App
+
+With npx, you can create a new React project directly without installing create-react-app globally.
+
+npx create-react-app my-app
+
+Pros and Cons:
+
+Pros: No need to install create-react-app globally. You always use the latest version available on the npm registry. It avoids global clutter and potential version conflicts.
+Cons: Each time you run this command, npx will download the create-react-app package, which might take a bit longer if you're creating multiple projects.
+When to Use npm vs. npx
+Use npm when you need to:
+
+Install and manage dependencies for your project.
+Install packages globally that you plan to use frequently across different projects.
+Use npx when you need to:
+
+Run a package without installing it globally, especially for one-off tasks.
+Ensure that you're using the latest version of a package.
+Avoid global installations and potential conflicts with other globally installed packages.
+
+In summary, npx is more convenient for running commands that you don’t need to install globally, while npm is better suited for managing dependencies and packages that you use regularly in your projects.
+
+Bypass the Execution Policy Temporarily
+You can bypass the execution policy for the current session by opening PowerShell as an administrator and running the following command:
+
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
