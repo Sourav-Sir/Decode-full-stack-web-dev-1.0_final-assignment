@@ -1,0 +1,51 @@
+Here’s a sample document for a products collection in MongoDB that uses at least five different data types:
+
+
+{
+  "_id": ObjectId("64e1d86d4e39c274b3f916c2"), // ObjectId (unique identifier)
+  "name": "Smartphone", // String
+  "price": 299.99, // Number (floating point)
+  "inStock": true, // Boolean
+  "releaseDate": ISODate("2024-08-01T00:00:00Z"), // Date
+  "specs": { // Embedded document (Object)
+    "brand": "TechCorp",
+    "model": "X200",
+    "features": ["5G", "128GB Storage", "16MP Camera"], // Array of strings
+    "dimensions": { // Embedded document (Object)
+      "height": "150mm",
+      "width": "70mm",
+      "depth": "8mm"
+    }
+  },
+  "reviews": [ // Array of embedded documents
+    {
+      "user": "JohnDoe",
+      "rating": 4.5, // Number (floating point)
+      "comment": "Great phone with excellent performance!"
+    },
+    {
+      "user": "JaneSmith",
+      "rating": 4.0,
+      "comment": "Good value for money, but battery life could be better."
+    }
+  ]
+}
+
+Breakdown of Data Types Used:
+
+ObjectId: Unique identifier for the document.
+
+String: Textual data (e.g., "name", "brand", "comment").
+
+Number: Numeric values (e.g., "price", "rating").
+
+Boolean: True/false value (e.g., "inStock").
+
+Date: Date and time (e.g., "releaseDate").
+
+
+Array: List of values (e.g., "features", "reviews").
+
+Embedded Document: Object within the document (e.g., "specs", "dimensions" in "specs", and each item in "reviews").
+
+This document demonstrates a variety of MongoDB data types and how they can be used to represent complex data structures.

@@ -1,0 +1,35 @@
+1. Creating and Dropping a Collection in MongoDB
+Creating a Collection:
+In MongoDB, you don't explicitly create a collection. Instead, MongoDB automatically creates a collection when you insert a document into it. Here's how it works:
+
+Connect to MongoDB using the mongo shell or a MongoDB client.
+Switch to the desired database using the use command. If the database does not exist, it will be created.
+Insert a document into a collection. If the collection does not exist, MongoDB will create it for you.
+Dropping a Collection:
+To drop a collection, you use the drop() method. This removes the collection and all of its documents. Here’s how to do it:
+
+Connect to MongoDB using the mongo shell or a MongoDB client.
+Switch to the database containing the collection you want to drop using the use command.
+
+Drop the collection using the db.collection.drop() method.
+
+2. Script to Create a Collection Named products in the shopDB Database
+Here’s a script to create a products collection in the shopDB database:
+
+
+// Connect to MongoDB (assuming you're using the mongo shell)
+use shopDB; // Switch to the shopDB database
+
+// Insert a document into the products collection to create it
+db.products.insertOne({ name: "Sample Product", price: 100 });
+3. Script to Drop the products Collection from the shopDB Database
+To drop the products collection, use this script:
+
+
+// Connect to MongoDB (assuming you're using the mongo shell)
+use shopDB; // Switch to the shopDB database
+
+// Drop the products collection
+db.products.drop();
+
+In these scripts, make sure you’re connected to the MongoDB server and have the necessary permissions to create or drop collections.

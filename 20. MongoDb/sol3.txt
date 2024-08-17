@@ -1,0 +1,36 @@
+1. Creating and Dropping a Database in MongoDB
+Creating a Database:
+In MongoDB, you don't explicitly create a database. Instead, you create a new database implicitly by adding data to it. When you first create a collection and insert documents into it, MongoDB creates the database for you. Here's the general process:
+
+Connect to MongoDB using the mongo shell or a MongoDB client.
+Switch to the new database using the use command. MongoDB will create the database if it doesn’t already exist.
+Create a collection and insert data to finalize the database creation.
+Dropping a Database:
+To drop a database, you can use the dropDatabase() method. This removes the database and all of its collections.
+
+Here are the steps:
+
+Connect to MongoDB using the mongo shell or a MongoDB client.
+Switch to the database you want to drop using the use command.
+Drop the database using the db.dropDatabase() method.
+
+
+2. Script to Create a New Database Named shopDB
+You can use the following script in the MongoDB shell to create a new database named shopDB:
+
+
+// Connect to MongoDB (assuming you're using the mongo shell)
+use shopDB; // This switches to shopDB. The database will be created if it doesn't exist.
+
+// Create a collection and insert a document to finalize the creation of the database
+db.products.insertOne({ name: "Sample Product", price: 100 });
+3. Script to Drop the shopDB Database
+To drop the shopDB database, use this script:
+
+
+// Connect to MongoDB (assuming you're using the mongo shell)
+use shopDB; // Switch to the shopDB database
+
+// Drop the database
+db.dropDatabase();
+In both scripts, make sure you're connected to the MongoDB server and have the necessary permissions to create or drop databases.

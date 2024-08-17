@@ -1,0 +1,14 @@
+Understanding Schemas in MongoDB
+1. What is a Schema in the Context of MongoDB?
+In MongoDB, a schema defines the structure of documents within a collection. Unlike traditional relational databases, MongoDB is schema-less by default, meaning that it does not require a predefined schema for its collections. This flexibility allows documents within the same collection to have different fields or data types.
+
+However, in many cases, defining a schema can help maintain consistency, enforce data validation, and improve readability. This is where Object Data Modeling (ODM) libraries like Mongoose come into play.
+
+2. How Schemas are Defined and Enforced in MongoDB Using Mongoose
+Mongoose is a popular ODM library for MongoDB that allows developers to define schemas and enforce structure on their MongoDB collections. While MongoDB itself doesn't enforce schemas, Mongoose allows you to define them in your application code.
+
+Here’s how Mongoose handles schemas:
+
+Schema Definition: In Mongoose, a schema is an object that defines the structure of documents in a collection. It specifies the fields, their types, and any validation or default values.
+Model Creation: Once a schema is defined, it is compiled into a model. The model represents the MongoDB collection and provides an interface to interact with it (e.g., querying, updating).
+Data Validation: Mongoose schemas can enforce data validation rules, ensuring that documents adhere to the defined structure. For example, you can specify that a field is required or that it should match a specific data type.
