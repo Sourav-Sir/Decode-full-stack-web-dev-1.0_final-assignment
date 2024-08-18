@@ -1,0 +1,16 @@
+1. What are Modules in Node.js and Why are They Important?
+Modules in Node.js are reusable blocks of code that encapsulate specific functionalities. They can be files or packages, which can be included in your application to extend its capabilities without rewriting code. Modules are important because they promote code reusability, maintainability, and separation of concerns by organizing code into distinct units.
+
+Node.js has a built-in module system that allows you to import and export modules using the require and module.exports (or export for ES modules) syntax.
+
+Types of Modules:
+
+Core Modules: Built-in modules provided by Node.js, such as http, fs, path, etc.
+Third-party Modules: Modules created by the community, available via npm (Node Package Manager).
+Custom Modules: Modules you create to encapsulate specific functionality in your application.
+
+2. Create a Custom Module to Calculate the Area of a Rectangle
+First, create a new file named rectangle.js for your custom module.
+
+3. Import and Use the Custom Module
+Create another file named app.js where you'll import and use the rectangle.js module.

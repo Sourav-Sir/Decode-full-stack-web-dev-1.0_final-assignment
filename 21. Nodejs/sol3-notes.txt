@@ -1,0 +1,34 @@
+1. Difference Between Synchronous and Asynchronous Operations in Node.js
+Synchronous Operations:
+
+Synchronous operations in Node.js are executed in a sequential order, blocking the execution of subsequent code until the current operation completes.
+When a synchronous function is called, the program waits for it to finish before moving on to the next line of code.
+This can lead to inefficiencies, especially for operations like I/O tasks (e.g., reading a file, making a network request) that take time, as it blocks the entire process.
+
+Asynchronous Operations:
+
+Asynchronous operations allow other code to execute while waiting for the operation to complete.
+In Node.js, asynchronous functions typically use callbacks, promises, or async/await to handle the completion of the operation.
+This non-blocking nature allows Node.js to handle many operations concurrently, making it highly efficient for I/O-bound tasks.
+
+2. Create a Script That Reads a File Asynchronously and Logs Its Content
+First, create a file named example.txt with some content that you want to read.
+Hello, this is an example file content!
+
+Now, create a script named readFileAsync.js to read this file asynchronously:
+
+3. Use the Built-in fs Module to Handle File Reading
+In the script above, the fs.readFile function from Node.js's built-in fs (File System) module is used to read the file asynchronously. The function takes three arguments:
+
+The path to the file (example.txt).
+The encoding (utf8), which ensures the file is read as a string.
+A callback function that is called when the reading operation is completed.
+Running the Code
+To execute the script, run:
+
+node readFileAsync.js
+
+You should see output similar to:
+
+File reading initiated...
+File content: Hello, this is an example file content!
