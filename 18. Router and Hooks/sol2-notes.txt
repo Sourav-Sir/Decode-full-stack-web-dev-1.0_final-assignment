@@ -1,0 +1,92 @@
+1. useState Hook
+Purpose
+useState is a hook used to add state to functional components in React.It allows you to declare state variables and update them within a functional component.
+
+    Syntax
+
+const [state, setState] = useState(initialState);
+state: The current state value.
+    setState: A function to update the state.
+        initialState: The initial value of the state.
+            Example
+
+import React, { useState } from 'react';
+
+const Counter = () => {
+    const [count, setCount] = useState(0); // Declaring a state variable 'count'
+
+    const increment = () => {
+        setCount(count + 1); // Updating the state
+    };
+
+    return (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick={increment}>Increment</button>
+        </div>
+    );
+};
+
+export default Counter;
+
+How It Manages State
+Initialization: useState takes an initial state value and returns an array with the current state value and a function to update it.
+State Update: When setState is called, React schedules a re - render of the component with the new state value.
+    Persistence: The state persists across re - renders of the component.Each call to useState returns the state and updater function for that specific piece of state.
+
+2. useEffect Hook
+Purpose
+useEffect is a hook used to perform side effects in functional components.Side effects include data fetching, subscriptions, or manually changing the DOM.It can also be used to handle component lifecycle events such as mounting, updating, and unmounting.
+
+    Syntax
+
+useEffect(() => {
+    // Code for side effects
+
+    return () => {
+        // Cleanup code (optional)
+    };
+}, [dependencies]);
+Effect Callback: The function passed to useEffect runs after the component renders.It can optionally return a cleanup function.
+Dependencies Array: The array of dependencies determines when the effect should re - run.If empty, the effect runs only on mount and unmount.If it contains dependencies, the effect runs whenever those dependencies change.
+    Example
+
+import React, { useState, useEffect } from 'react';
+
+const Example = () => {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        console.log('Component rendered or count changed');
+
+        return () => {
+            console.log('Cleanup before the next effect or unmount');
+        };
+    }, [count]); // Effect runs when 'count' changes
+
+    return (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+    );
+};
+
+export default Example;
+
+How It Manages Side Effects
+Effect Execution: The effect function runs after the component has rendered.It is useful for operations that need to interact with the DOM or perform asynchronous actions.
+    Cleanup: The optional cleanup function is used to clean up side effects, such as unsubscribing from subscriptions or clearing timers.It runs before the effect re - runs or when the component unmounts.
+        Dependencies: By providing a dependency array, you control when the effect should re - run.This avoids unnecessary effect executions and helps optimize performance.
+            
+            Summary
+
+useState: Manages state in functional components.It initializes state and provides a function to update it.
+    useEffect: Manages side effects and lifecycle events.It runs code after the component renders and can handle cleanup.
+Both hooks simplify the way state and side effects are handled in React functional components, offering a more concise and readable approach compared to class components.
+
+
+
+
+
+
